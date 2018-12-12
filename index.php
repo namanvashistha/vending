@@ -61,12 +61,19 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 </head>
 <body>
 	<nav>
-		<img src="images/header_logo.jpeg" height= "45px" width = "110px" align="left" alt="logo">
-  		<a style="float:right;" onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Sign up</a>
-  		<div class="or">or</div>
-  		<a style="float:right;" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+		<img id="logo" src="images/logo.png"  height="45px" width="300px" align="left" alt="logo">
+		<span >	
+  		<a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Register </a>
+  		<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></span>
 	</nav>
-	<div>div</div>
+	<div id="vendors"> 
+		<div>
+			<form class="search-container">
+    		<input type="text" id="search-bar" placeholder="Search...">
+    		<a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+  			</form>
+		</div>
+	</div>
 	<footer>footer</footer>
 	<div id="id01" class="modal">
   		<form class="modal-content animate" method="POST" >
