@@ -55,7 +55,7 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 <html>
 <head>
 	<title>BookMyShaadi</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	<script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -63,48 +63,15 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
   crossorigin="anonymous"></script>
 </head>
 <body>
-	<nav>
-		<img id="logo" src="images/logo.png"  height="45px" width="300px" align="left" alt="logo">
-		<span >	
-  		<a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Register </a>
-  		<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></span>
-	</nav>
-	<div style="display: block;">
-	<div id="front">
-		<div id="slideshow">
-   			<div>
-     			<img class="slide" src="http://localhost/builder-vending/images/s1.jpg">
-   			</div>
-   			<div>
-     			<img class="slide" src="http://localhost/builder-vending/images/s2.jpg">
-   			</div>
-   			<div>
-     			<img class="slide" src="http://localhost/builder-vending/images/s3.jpg">
-   			</div>	
-		</div> 
-		<div id="search">
-			<form class="search-container">
-    		<input type="text" class="search-bar" placeholder="Search for">
-    		<input type="text" class="search-bar" placeholder="Locate">
-  			</form>
-  			<div onclick="con()" class="search-icon" >Search</div>
-		</div>
-	</div>
-		<div style="position: relative;">
-			1
-		</div>
-		<div>
-			2
-		</div>
-	</div>
-	<footer>footer</footer>
-	<div id="id01" class="modal">		
-  		<form class="modal-content animate" method="POST" >
-  			
-    		<div class="imgcontainer">
-      			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    		</div>
-    		<img src="images/frame2.jpg">
+<nav>
+		<a href="index.php"><img id="logo" src="images/logo.png"  height="45px" width="300px" align="left" alt="logo"></a>
+</nav>
+
+
+	
+<div id="id01" class="modal">		
+  		<form class="modal-content" method="POST" >
+    		<img src="images/s3.jpg">
 			<div class="container">
 			  <div class="group">      
                 <input type="text" required>
@@ -126,10 +93,6 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 
 	<div id="id02" class="modal">
   		<form class="modal-content animate" method="POST" >
-    		<div class="imgcontainer">
-      			<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-    		</div>
-    		<img src="images/frame2.jpg">
     		<div class="container">
       		  <div class="group">      
                 <input type="text" required>
@@ -169,6 +132,7 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
     		</div>
 		</form>
 	</div>
-	<script src="js/index.js" ></script>
+<footer>footer</footer>
+<script src="vendor.js"></script>
 </body>
 </html>
