@@ -133,6 +133,6 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 		</form>
 	</div>
 <footer>footer</footer>
-<script src="vendor.js"></script>
+<script src="js/vendor.js"></script>
 </body>
 </html>

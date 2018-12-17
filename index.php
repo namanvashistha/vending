@@ -1,6 +1,6 @@
 <?php
 include 'connection.php';
-	
+session_start();	
 $error_msg="";
 if(isset($_POST['login']) || isset($_POST['signup'])){
 	session_start();
@@ -69,7 +69,8 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
   		<a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Register </a>
   		<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></span>
 	</nav>
-	<div style="display: block;">
+	<div>
+  <?php if(!isset($_SESSION['log_name'])){ ?>
 	<div id="front">
 		<div id="slideshow">
    			<div>
@@ -89,13 +90,40 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
   			</form>
   			<div onclick="con()" class="search-icon" >Search</div>
 		</div>
-	</div>
-		<div style="position: relative;">
-			1
-		</div>
-		<div>
-			2
-		</div>
+	</div><?php } else { ?>
+    <div id="home-search">
+      <form class="home-search-container">
+        <input type="text" class="home-search-bar" placeholder="Search for">
+      </form>
+        <div onclick="con()" class="home-search-icon" >Search</div>
+    </div>
+    <div id="vendors">
+      <div id="filters">
+        filters
+      </div>
+		<div id="ven-cards">
+			<ul class="cards">
+      <?php
+      $q="SELECT * FROM `restaurants`; ";
+      $q1=mysqli_query($con,$q);
+
+      while($row=mysqli_fetch_array($q1)){ ?>
+        <li class="cards__item">
+          <a onclick="document.getElementById('id01').style.display='block'">
+            <div class="card">
+              <div style="background-image: url(images/s<?php  echo mt_rand(1,3);?>.jpg);" class="card__image"></div>
+                <div class="card__content">
+                  <div class="card__title"><?php echo $row['name'];  ?></div><span><b><?php  echo ($row['status']=="Online")?"<font color='green'>Online</font>":"<b>Offline</b>";  ?></b></span>
+                    <p class="card__text"><?php echo $row['address']."<br>".$row['description'];  ?></p>
+                </div>
+            </div>
+          </a>
+        </li>
+      <?php } ?>
+      </ul>
+    </div>
+
+  <?php } ?>
 	</div>
 	<footer>footer</footer>
 	<div id="id01" class="modal">		

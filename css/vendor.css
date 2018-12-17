@@ -98,10 +98,12 @@ span .log_pass {
     padding-top: 0px;
     padding-bottom: 0px;
     z-index: 3;
+    margin-top: 5px;
 }
 
 
 .modal-content {
+	margin-top: 5px;
     background-color: white;
     width: 100%;
 }
@@ -218,5 +220,6 @@ span .log_pass {
 }
 
 #id02 .modal-content{
-	float: left;
+	height: 1000px;
+
 }

@@ -4,6 +4,8 @@ body{
 	margin:0px;
 	font-family: Roboto;
 	color: #808080;
+  height: 100%;
+  position: relative;
 }
 
 nav{
@@ -29,16 +31,29 @@ nav #logo{
 	margin-left: 20px;
 }
 footer{
-	height: 100px;
+  display: none;
+	height: 200px;
+  width: 100%;  
 	background-color:#F5F5F5;
 	box-shadow: 0px 0px -1px;
-	bottom: 0px;
+  position: inherit; 
 }
 
 #front{
-	height: 700px;
+  background-color: green;
 }
 
+#vendors{
+  display: inline;
+}
+#filters{
+  background-color: red;
+  width: 15%;
+}
+#ven-cards{
+  background-color: black;
+  width: 85%;
+}
 .modal button {
     background-color: #800000;
     color: white;
@@ -99,7 +114,6 @@ span .log_pass {
     width: 100%; 
     height: 100%; 
     overflow: auto;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
     padding-top: 0px;
     padding-bottom: 0px;
@@ -112,6 +126,7 @@ span .log_pass {
     margin: 0 auto 0 auto;
     width: 70%;
     height: 500px;
+    border-radius: 5px;
 }
 
 .buttons{
@@ -333,4 +348,186 @@ input.search-bar{
     left: 0px; 
     right: 0px; 
     bottom: 0px; 
+}
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.cards img {
+  
+  width: 100%;
+  vertical-align: middle;
+}
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+.btn--block {
+  display: block;
+  width: 100%;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cards a{
+  text-decoration: none;
+  background-color: white;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+   width: 100%;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+
+}
+@media (min-width: 20rem) {
+   .cards__item {
+    width: 100%;
+  }
+  .cards a{
+    width: 100%; 
+  }
+}
+
+@media (min-width: 40rem) {
+  .cards__item {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
+  }
+}
+
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: gray;
+}
+.card:hover .card__image {
+  -webkit-filter: contrast(100%);
+          filter: contrast(100%);
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  -webkit-filter: contrast(70%);
+          filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+}
+
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+
+
+#home-search{
+  background-color: green;
+  margin-left:15%;
+  position: relative;
+  z-index: 2;
+  width:65%;
+  display: inline;
+}
+.home-search-container{
+  width: 100%;
+  height: 50px;
+  display: inline;
+}
+
+input.home-search-bar{
+  margin:-5px;
+  width: 30%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+  &:focus{
+    border: 1px solid #008ABF;
+    transition: 0.35s ease;
+    color: #008ABF;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease; 
+      opacity: 0;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease; 
+      opacity: 0;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease; 
+     opacity: 0;
+     }    
+   }
+ }
+#home-search a{
+  text-decoration:none;
+}
+.home-search-icon{
+  position: relative;
+  display: inline;
+  background-color:   #800000;
+  height: 50px; 
+  width: 100%;
+  color: white;
+  margin-bottom: -2px;
+  padding:15.5px 20px;
+  border: 1px solid #D0CFCE;
+  font-weight: bold;
+  cursor: pointer;
 }

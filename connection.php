@@ -1,3 +1,3 @@
 <?php
-	$con=mysqli_connect("localhost","root","","builder");
+	$con=mysqli_connect("localhost","root","","food");
 ?>
