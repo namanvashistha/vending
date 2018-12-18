@@ -14,24 +14,47 @@ nav{
 	box-shadow: 0px 0px 1px; 
 }
 nav span{
-	float:right;
-	margin-top:20px;
-	margin-right:20px;
+  position: absolute;
+	right:0px;
+	margin-top:35px;
+	margin-right:25px;
 }
-nav a{
+
+nav span a{
 	cursor: pointer;
-	padding: 10px;
+  text-decoration:none;
+	padding: 5px;
+  color:#800000;
 }
 nav a:hover{
 	cursor: pointer;
-	color:#909090; 
+	color:#800000; 
 }
+
+#vendor-link{
+  position: absolute;
+  right: 0px;
+  margin-top:10px;
+  float: right;
+  margin-right:20px;
+}
+
+#vendor-link a{
+  text-decoration:none;
+  color: #808080;
+}
+
+#vendor-link a:hover{
+  cursor: pointer;
+  color:#800000;
+}
+
 nav #logo{
 	margin-top:10px;
 	margin-left: 20px;
 }
 footer{
-  display: none;
+  display: block;
 	height: 200px;
   width: 100%;  
 	background-color:#F5F5F5;
@@ -43,15 +66,34 @@ footer{
   background-color: green;
 }
 
+#search-space{
+  background-image: url("../images/s3.jpg");
+  width: 100%;
+  position: relative;
+  height: 120px;
+}
+
 #vendors{
-  display: inline;
+  display: inline-flex;
 }
+
+
 #filters{
-  background-color: red;
-  width: 15%;
+  width: 20%;
 }
+
+#filter-applied{
+
+}
+
+.filter-box{
+  width: 80%;
+  z-index: 10;
+  position: relative;
+  margin-left: 15px;
+}
+
 #ven-cards{
-  background-color: black;
   width: 85%;
 }
 .modal button {
@@ -340,6 +382,8 @@ input.search-bar{
 #slideshow img{
   width: 100%;
   position: absolute;
+  background: rgba(0,0,0,.4);
+  filter: grayscale(100%);
 }
 
 #slideshow > div { 
@@ -388,6 +432,7 @@ input.search-bar{
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   border-radius: 0.25rem;
    width: 100%;
+   cursor: pointer;
 }
 
 .cards__item {
@@ -422,7 +467,7 @@ input.search-bar{
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: gray;
+  color: gray;  
 }
 .card:hover .card__image {
   -webkit-filter: contrast(100%);
@@ -473,12 +518,10 @@ input.search-bar{
   margin-bottom: 1.25rem;
 }
 
-
-
 #home-search{
-  background-color: green;
-  margin-left:15%;
-  position: relative;
+  margin-top: 40px;
+  margin-left:25%;
+  position: absolute;
   z-index: 2;
   width:65%;
   display: inline;
@@ -522,7 +565,7 @@ input.home-search-bar{
   position: relative;
   display: inline;
   background-color:   #800000;
-  height: 50px; 
+  height: 48px; 
   width: 100%;
   color: white;
   margin-bottom: -2px;
@@ -531,3 +574,7 @@ input.home-search-bar{
   font-weight: bold;
   cursor: pointer;
 }
+
+
+
+

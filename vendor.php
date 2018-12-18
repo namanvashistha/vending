@@ -1,9 +1,9 @@
 <?php
 include 'connection.php';
-	
+session_start();	
 $error_msg="";
 if(isset($_POST['login']) || isset($_POST['signup'])){
-	session_start();
+	
 
 	if(isset($_POST['login'])){
 		$log_email =$_POST['log_email'];
@@ -131,7 +131,136 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 			    <button type="submit" name="signup" value="Sign Up">Sign Up</button>
     		</div>
 		</form>
+
 	</div>
+
+	<div class="containerform form__wrapper"> 
+  
+  <h2>Edit Client Profile</h2>
+  
+  <form id="myForm">
+
+    <div class="form-row">
+
+      <div class="form-group col-md-6">
+
+        <label for="firstName">First Name</label>
+        <input name="firstName" type="text" class="form-control" id="firstName" placeholder="First name">
+
+      </div><!-- /form-group -->
+
+      <div class="form-group col-md-6">
+
+        <label for="lastName">Last Name</label>
+        <input name="lastName" type="text" class="form-control" id="lastName" placeholder="Last name">
+
+      </div><!-- /form-group -->
+
+    </div><!-- /form-row -->
+
+    <div class="form-group">
+
+      <label for="company">Company</label>
+      <input name="company" type="text" class="form-control" id="company" placeholder="Company">
+
+    </div><!-- /form-group -->
+    
+    <div class="form-group">
+
+      <label for="street">Street</label>
+      <input name="street" type="text" class="form-control" id="street" placeholder="Street">
+
+    </div><!-- /form-group -->
+ 
+    <div class="form-row">
+
+      <div class="form-group col-md-6">
+
+        <label for="city">City</label>
+        <input name="city" type="text" class="form-control" id="city" placeholder="City">
+
+      </div><!-- /form-group -->
+
+      <div class="form-group col-md-4">
+
+        <label for="state">State</label>
+        <input name="state" type="text" class="form-control" id="state" placeholder="State">
+
+      </div><!-- /form-group -->
+
+      <div class="form-group col-md-2">
+
+        <label for="zipCode">Zip Code</label>
+        <input name="zipCode" type="text" class="form-control" id="zipCode" placeholder="Zip code">
+
+      </div><!-- /form-group -->
+
+    </div><!-- /form-row -->
+
+    <div class="form-row">
+
+      <div class="form-group col-md-6">
+
+        <label for="homeNumber">Home Number</label>
+        <input name="homeNumber" type="tel" class="form-control" id="homeNumber" placeholder="Home number">
+
+      </div><!-- /form-group -->
+
+      <div class="form-group col-md-6">
+
+        <label for="faxNumber">Fax Number</label>
+        <input name="faxNumber" type="tel" class="form-control" id="faxNumber" placeholder="Fax number">
+
+      </div><!-- /form-group -->
+
+    </div><!-- /form-row -->
+
+    <div class="form-row form__comments">
+
+      <div id="form__comments-by" class="form-group col-md-6"></div>
+      <div id="form__comments-txt" class="form-group col-md-6"></div>
+
+    </div><!-- /form-row -->
+
+    <div class="form__btns">
+
+      <button id="cancel" class="btn btn-outline-primary">Cancel</button>
+      <button id="save" class="btn btn-primary">Save</button>
+
+    </div><!-- /form__btns -->
+
+  </form>
+
+</div><!-- /container -->  
+
+
+
+
+
+
+	<?php 
+	if(isset($_SESSION['upload_error'])){
+		echo "<b>".$_SESSION['upload_error']."<b>";
+		$_SESSION['upload_error']='';
+	}
+	?>
+
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+	</form>
+	
+
+	<div id="img-grid">
+		<?php 
+		$dir = scandir("uploads/");
+		foreach ($dir as $value) {
+			if($value != "." && $value != ".."){
+		?>
+		<div><img src="uploads/<?php echo $value; ?>"></div>
+		<?php } } ?>		 
+		</div>
 <footer>footer</footer>
 <script src="js/vendor.js"></script>
 </body>

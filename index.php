@@ -3,7 +3,7 @@ include 'connection.php';
 session_start();	
 $error_msg="";
 if(isset($_POST['login']) || isset($_POST['signup'])){
-	session_start();
+
 
 	if(isset($_POST['login'])){
 		$log_email =$_POST['log_email'];
@@ -15,9 +15,7 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 			$_SESSION['log_email'] =$log_email;
 			$_SESSION['log_name'] =$row['name'];
 			$_SESSION['log_client'] ="user";
-			$q_ip="INSERT INTO `stats` (`ip_address`, `coordinates`,`city`,`client`,`status`) VALUES ('$ipaddress','','','$log_email','login');";
-    		mysqli_query($con,$q_ip);
-			header("location:home.php");
+      header("location:index.php");
 		}
 		else{
 			$error_msg="incorrect email or password";
@@ -42,13 +40,14 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 				$_SESSION['log_email'] =$sign_email;
 				$_SESSION['log_name'] =$sign_name;
 				$_SESSION['log_client'] ="user";
-				$q_ip="INSERT INTO `stats` (`ip_address`, `coordinates`,`city`,`client`,`status`) VALUES ('$ipaddress','','','$log_email','signup');";
-    			mysqli_query($con,$q_ip);
-				header("location:home.php");	
+        header("location:index.php");
 			}
 		}
 	}
 }
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -65,9 +64,20 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 <body>
 	<nav>
 		<img id="logo" src="images/logo.png"  height="45px" width="300px" align="left" alt="logo">
+    <?php if(!isset($_SESSION['log_name'])){ ?>
+    <div id="vendor-link">
+      <a href="vendor.php">Are you a vendor?</a>
+    </div>
 		<span >	
   		<a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Register </a>
   		<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></span>
+      <?php } else { ?>
+        <div id="vendor-link">
+      <a style="cursor:default;">Welcome <?php echo $_SESSION['log_name']; ?></a>
+    </div>
+        <span id="logout" > 
+      <a  href="logout.php" style="width:auto;" >Logout </a></span>
+       <?php } ?> 
 	</nav>
 	<div>
   <?php if(!isset($_SESSION['log_name'])){ ?>
@@ -91,15 +101,46 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
   			<div onclick="con()" class="search-icon" >Search</div>
 		</div>
 	</div><?php } else { ?>
+  <div id="search-space">
     <div id="home-search">
       <form class="home-search-container">
-        <input type="text" class="home-search-bar" placeholder="Search for">
+        <input list="datalist" type="search" class="home-search-bar" placeholder="Search for">
+        <input list="datalist" type="Search" class="home-search-bar" placeholder="Locate">
+        <datalist id="datalist">
+        <option value="Delhi">
+        <option value="Mumbai">
+        <option value="Noida">
+      </datalist>
       </form>
         <div onclick="con()" class="home-search-icon" >Search</div>
     </div>
+  </div>
     <div id="vendors">
       <div id="filters">
-        filters
+        <div id="filter-applied">
+          red;
+        </div>
+        <div class="filter-box">
+            <label>
+      datalist<br>
+      <input list="datalist">
+      <datalist id="datalist">
+        <option value="Delhi">
+        <option value="Mumbai">
+        <option value="Noida">
+      </datalist>
+      <option value="Delhi">
+        <option value="Mumbai">Mumbai
+        <option value="Noida">
+    </label>
+
+        </div>
+        <div class="filter-box">
+            category
+        </div>
+        <div class="filter-box">
+          type of service
+        </div>
       </div>
 		<div id="ven-cards">
 			<ul class="cards">
@@ -135,13 +176,13 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
     		<img src="images/frame2.jpg">
 			<div class="container">
 			  <div class="group">      
-                <input type="text" required>
+                <input type="text" name="log_email" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Email</label>
               </div>
         	  <div class="group">      
-                <input type="password" required>
+                <input type="password" name="log_pass" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Password</label>
