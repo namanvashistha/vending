@@ -150,7 +150,7 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
 
       while($row=mysqli_fetch_array($q1)){ ?>
         <li class="cards__item">
-          <a onclick="document.getElementById('id01').style.display='block'">
+          <a class="vendor-info-link"  onclick="showvendorinfo('<?php echo $row['name'];  ?>');" >
             <div class="card">
               <div style="background-image: url(images/s<?php  echo mt_rand(1,3);?>.jpg);" class="card__image"></div>
                 <div class="card__content">
@@ -238,6 +238,39 @@ if(isset($_POST['login']) || isset($_POST['signup'])){
     		</div>
 		</form>
 	</div>
+  <div id="id03" class="modal-vendor">   
+      <div class="modal-vendor-content animate" >
+        
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal-vendor">&times;</span>
+        </div>
+        
+      <div class="container">
+        
+        </div>
+      </div>
+  </div>
 	<script src="js/index.js" ></script>
+  <script>
+function showvendorinfo(str) {
+  document.getElementById('id03').style.display='block';
+  $(document).ready(function(){
+    str="fetch.php?vendor="+str;
+    $('.container').load("README.md").fadeIn("slow");
+      $.ajax({
+                    url:"fetch.php",
+                    method:"GET",
+                    dataType:"text",
+                    success:function(data){
+                       $('.container').load(str).fadeIn("slow");
+                }
+            });
+    });
+}
+  /*setInterval(function(){
+    $('#msg-box').load("fetch_msg.php").fadeIn("slow");
+  },1000);
+});*/
+  </script>
 </body>
 </html>

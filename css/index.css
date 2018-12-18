@@ -88,7 +88,6 @@ footer{
 
 .filter-box{
   width: 80%;
-  z-index: 10;
   position: relative;
   margin-left: 15px;
 }
@@ -578,3 +577,120 @@ input.home-search-bar{
 
 
 
+
+
+
+.modal-vendor button {
+    background-color: #800000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    font-weight:bold;
+}
+
+.modal-vendor button:hover {
+    opacity: 0.8;
+}
+
+.modal-vendor .cancelbtn {
+    width: auto;
+    padding: 10px 10px;
+    background-color: #404040;
+}
+
+.modal-vendor .imgcontainer {
+    text-align: center;
+    margin: 12px 0 12px 0;
+    position: relative;
+}
+
+
+ .modal-vendor img{
+  position: relative;
+  width: 55%;
+  height: 500px;
+  margin-bottom: 0px;
+}
+
+.modal-vendor .container {
+    width: 100%;
+}
+
+.modal-vendor span .log_pass {
+    text-decoration: none;
+    float: right;
+    padding-top: 16px;
+}
+
+
+.modal-vendor {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    z-index: 3;
+}
+
+
+.modal-vendor-content {
+    background-color:#800000;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.modal-vendor .buttons{
+  color: #FFDF00;
+}
+
+.modal-vendor .close {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.modal-vendor .close:hover,.modal-vendor .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.modal-vendor .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    .modal-vendor span.log_pass{
+        text-decoration: none;
+       display: block;
+       float: none;
+    }
+    .modal-vendor .cancelbtn {
+       width: 100%;
+    }
+}
