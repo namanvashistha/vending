@@ -54,7 +54,7 @@ nav #logo{
 	margin-left: 20px;
 }
 footer{
-  display: block;
+  display: none;
 	height: 200px;
   width: 100%;  
 	background-color:#F5F5F5;
@@ -95,7 +95,7 @@ footer{
 #ven-cards{
   width: 85%;
 }
-.modal button {
+.modal input[type=submit] {
     background-color: #800000;
     color: white;
     padding: 14px 20px;
@@ -107,7 +107,7 @@ footer{
     font-weight:bold;
 }
 
-.modal button:hover {
+.modal input[type=submit]:hover {
     opacity: 0.8;
 }
 
@@ -133,9 +133,9 @@ footer{
 }
 
 .container {
-    padding-top: 50px;    
+    padding-top: 30px;    
     padding-right: 50px;
-    width: 30%;
+    width: 40%;
     float: right;
 }
 
@@ -169,7 +169,10 @@ span .log_pass {
     height: 500px;
     border-radius: 5px;
 }
-
+.error_msg{
+  color: red;
+  text-align: center;
+}
 .buttons{
   color: #FFDF00;
 }
@@ -382,7 +385,6 @@ input.search-bar{
   width: 100%;
   position: absolute;
   background: rgba(0,0,0,.4);
-  filter: grayscale(100%);
 }
 
 #slideshow > div { 
@@ -574,123 +576,21 @@ input.home-search-bar{
   cursor: pointer;
 }
 
-
-
-
-
-
-
-.modal-vendor button {
-    background-color: #800000;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    color: white;
-    font-weight:bold;
+.gender{
+  color: #800000;
+  margin-top: -15px;
+}
+.gender p{
+  font-size: 20px;
 }
 
-.modal-vendor button:hover {
-    opacity: 0.8;
-}
-
-.modal-vendor .cancelbtn {
-    width: auto;
-    padding: 10px 10px;
-    background-color: #404040;
-}
-
-.modal-vendor .imgcontainer {
-    text-align: center;
-    margin: 12px 0 12px 0;
-    position: relative;
-}
-
-
- .modal-vendor img{
+.gender div{
   position: relative;
-  width: 55%;
-  height: 500px;
-  margin-bottom: 0px;
+  width: 30%;
+  display: inline-block;
 }
 
-.modal-vendor .container {
-    width: 100%;
-}
-
-.modal-vendor span .log_pass {
-    text-decoration: none;
-    float: right;
-    padding-top: 16px;
-}
-
-
-.modal-vendor {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 0px;
-    padding-bottom: 0px;
-    z-index: 3;
-}
-
-
-.modal-vendor-content {
-    background-color:#800000;
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    border-radius: 5px;
-}
-
-.modal-vendor .buttons{
-  color: #FFDF00;
-}
-
-.modal-vendor .close {
-    position: absolute;
-    right: 15px;
-    top: 0px;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.modal-vendor .close:hover,.modal-vendor .close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-.modal-vendor .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-    
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-@media screen and (max-width: 300px) {
-    .modal-vendor span.log_pass{
-        text-decoration: none;
-       display: block;
-       float: none;
-    }
-    .modal-vendor .cancelbtn {
-       width: 100%;
-    }
+.gender input{
+  width: 30%;
+  display: inline-flex;
 }

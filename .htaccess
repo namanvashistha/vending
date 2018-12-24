@@ -1,0 +1,19 @@
+# Turn Rewrite Engine On
+RewriteEngine on
+
+# Rewrite for projects.php
+RewriteRule ^vendor$ vendor.php [NC,L]
+RewriteRule ^vendors$ vendors.php [NC,L]
+RewriteRule ^web$ web.php [NC,L]
+
+# NC makes the rule non case sensitive
+# L makes this the last rule that this specific condition will match
+# $ in the regular expression makes the matching stop so that "customblah" will not work
+
+# Rewrite for user.php?u=xxxxx
+RewriteRule ^vendor/([0-9a-zA-Z]+)$ vendor.php?q=$1 [NC,L]
+RewriteRule ^web/([0-9a-zA-Z]+)$ web.php?q=$1 [NC,L]
+
+# Rewrite for article.php?id=1&title=Title-Goes-Here
+RewriteRule ^article/([0-9]+)/([0-9a-zA-Z_-]+)$ article.php?id=$1&title=$2 [NC,L]
+

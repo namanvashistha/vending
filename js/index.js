@@ -23,3 +23,14 @@ setInterval(function() {
 },  5000);
 
 
+
+
+function submit_form() {
+  if (document.forms["signForm"]["sign_email"].value == "") {
+        document.getElementById('sign_error_msg').innerHTML="Name must be filled out";
+    }
+    else {
+        
+        document.forms['signForm'].submit();
+    }
+}

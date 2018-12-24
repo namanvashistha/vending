@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+body{
+	margin:0px;
+	font-family: Roboto;
+	color: #808080;
+}
+
+nav{
+	height: 60px;
+	background-color: white;
+	box-shadow: 0px 0px 1px; 
+}
+nav span{0
+	float:right;
+	margin-top:20px;
+	margin-right:20px;
+}
+nav a{
+	cursor: pointer;
+	padding: 10px;
+}
+nav a:hover{
+	cursor: pointer;
+	color:#909090; 
+}
+nav #logo{
+	margin-top:10px;
+	margin-left: 20px;
+}
+footer{
+	height: 100px;
+	background-color:#F5F5F5;
+	box-shadow: 0px 0px -1px;
+	bottom: 0px;
+}
+
+
+.modal button {
+    background-color: #800000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    font-weight:bold;
+}
+
+.modal button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #404040;
+    color:  ;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+ .modal img{
+  position: relative;
+  width: 55%;
+}
+
+.container {
+    padding-top: 50px;    
+    padding-right: 50px;
+    width: 30%;
+    float: right;
+}
+
+span .log_pass {
+    text-decoration: none;
+    float: right;
+    padding-top: 16px;
+}
+
+
+.modal {
+    display: block; 
+    position:relative; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    z-index: 3;
+    margin-top: 5px;
+}
+
+
+.modal-content {
+	margin-top: 5px;
+    background-color: white;
+    width: 100%;
+}
+
+.buttons{
+  color: #FFDF00;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.group 			  { 
+  position:relative; 
+  margin-bottom:35px; 
+}
+
+.modal input 				{
+  font-size:18px;
+  padding:10px 5px 5px 5px;
+  display:block;
+  width:95%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+.modal input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+.modal label 				 {
+  color:  #800000; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:5px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.modal input:focus ~ label,.modal  input:valid ~ label 		{
+  top:-15px;
+  font-size:14px;
+  color:  #800000;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:100%; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background: #800000; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.modal input:focus ~ .bar:before,.modal input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.modal input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+#id02 .modal-content{
+	
+
+}
+
+#img-grid { 
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
+  display: flex;
+}
+#img-grid div { 
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 200px;
+  max-width: 33%; 
+  margin: .5vw; 
+}
+#img-grid div img { 
+  width: 100%; 
+  height: auto;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 0.10rem; 
+}
+@media screen and (max-width: 50%) {
+  #img-grid div { margin: 0; }
+  #img-grid { padding: 0; }
+  
+}
+
+
+
+.containerform button,
+.containerform input,
+.containerform textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.containerform label {
+  margin: 0.75em 0;
+  font-weight: bold;
+}
+
+.containerform input[type="radio"] + .containerform label,
+.containerform input[type="checkbox"] + .containerform label { 
+  margin: 0;
+  font-weight: 400; 
+}
+
+.containerform button,
+.containerform input[type=button],
+.containerform input[type=reset],
+.containerform input[type=submit],
+{
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.containerform button[disabled],
+.containerform input[disabled] {
+  cursor: default;
+}
+
+.containerform input {
+  line-height: normal;
+}
+
+.containerform textarea { line-height: 1.25em; }
+
+.containerform select {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.containerform input[type=checkbox],
+.containerform input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 0.25em;
+  margin-top: 2px;
+  float: left;
+  clear: both;
+}
+
+.containerform input[type=search] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.containerform input[type=search]::-webkit-search-cancel-button,
+.containerform input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.containerform input[type=text],
+.containerform input[type=password],
+.containerform input[type=email],
+.containerform input[type=url],
+.containerform input[type=tel],
+.containerform keygen::-webkit-keygen-select,
+.containerform select,
+.containerform textarea {
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 2px;
+  vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0.5em 0.6em;
+  margin-bottom: 0.5em;
+}
+
+.containerform input:not([type]) {
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5em 0.6em;
+}
+
+.containerform input[type=color] {
+  padding: 0.2em 0.5em;
+}
+
+.containerform input[type=file]:focus,
+.containerform input[type=radio]:focus,
+.containerform input[type=checkbox]:focus {
+  outline: 1px auto #129FEA;
+}
+
+.containerform input[readonly],
+.containerform select[readonly],
+.containerform textarea[readonly] {
+  background-color: #800000;
+  color: #777;
+  border-color: #ccc;
+}
+
+.containerform input:focus:invalid,
+.containerform textarea:focus:invalid,
+.containerform select:focus:invalid {
+  color: #b94a48;
+  border-color: #e9322d;
+  }
+
+.containerform input[type=file]:focus:invalid:focus,
+.containerform input[type=radio]:focus:invalid:focus,
+.containerform input[type=checkbox]:focus:invalid:focus {
+  outline-color: #e9322d;
+}
+
+
+/* Style your form buttons. Follow your heart */
+
+.containerform input[type="submit"],
+.containerform input[type="reset"],
+.containerform input[type="button"],
+.containerform button {
+  padding: 8px 12px;
+  color: white;
+  background-color: #800000;
+  border: 0;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.containerform input[type="submit"]:hover,
+.containerform input[type="reset"]:hover,
+.containerform input[type="button"]:hover,
+.containerform button:hover {
+  background-color:   #B22222;
+}
