@@ -53,14 +53,6 @@ nav #logo{
     margin-top:10px;
     margin-left: 20px;
 }
-footer{
-  display: block;
-    height: 200px;
-  width: 100%;  
-    background-color:#F5F5F5;
-    box-shadow: 0px 0px -1px;
-  position: inherit; 
-}
 
 
 .modal-vendor button {
@@ -101,6 +93,10 @@ footer{
 
 .modal-vendor .container {
     width: 100%;
+    height: 550px;
+    margin-top: -15px;
+    background-size: cover;
+    background-position: center center;
 }
 
 .modal-vendor span .log_pass {
@@ -128,11 +124,12 @@ footer{
 
 .modal-vendor-content {
     background-color:white;
-    width: 100%;
+    width: 90%;
+    margin: 25px 5%;
     height: 500px;
     position: absolute;
     border-radius: 5px;
-
+    top: 0px;
 }
 
 .modal-vendor .buttons{
@@ -141,8 +138,8 @@ footer{
 
 .modal-vendor .close {
     position: absolute;
-    right: 15px;
-    top: 0px;
+    right: -5%;
+    top: -40px;
     color: #000;
     font-size: 35px;
     font-weight: bold;
@@ -181,3 +178,511 @@ footer{
 
 
 
+
+
+.modal1 input[type=submit] {
+    background-color: #800000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    font-weight:bold;
+}
+
+.modal1 input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+.modal1 .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #404040;
+    color:  ;
+}
+
+.modal1 .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+ .modal1 img{
+  position: relative;
+  width: 55%;
+  height: 500px;
+  margin-bottom: 0px;
+}
+
+.modal1 .container {
+    padding-top: 30px;    
+    padding-right: 50px;
+    width: 35%;
+    float: right;
+
+}
+
+.modal1 span .log_pass {
+    text-decoration: none;
+    float: right;
+    padding-top: 16px;
+}
+
+
+.modal1 {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    z-index: 3;
+}
+
+
+.modal1 .modal-content {
+    background-color: #fefefe;
+    margin: 0 auto 0 auto;
+    width: 70%;
+    height: 500px;
+    border-radius: 5px;
+}
+.modal1 .error_msg{
+  color: red;
+  text-align: center;
+}
+.modal1 .buttons{
+  color: #FFDF00;
+}
+
+.modal1 .close {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.modal1 .close:hover,.modal1 .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.modal1 .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    .modal1 span.log_pass{
+        text-decoration: none;
+       display: block;
+       float: none;
+    }
+    .modal1 .cancelbtn {
+       width: 100%;
+    }
+}
+
+.modal1 .group        { 
+  position:relative; 
+  margin-bottom:35px; 
+}
+
+.modal1  input        {
+  font-size:18px;
+  padding:10px 5px 5px 5px;
+  display:block;
+  width:95%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+.modal1 input:focus    { outline:none; }
+
+/* LABEL ======================================= */
+.modal1 label         {
+  color:  #800000; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:5px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.modal1 input:focus ~ label, .modal1  input:valid ~ label    {
+  top:-15px;
+  font-size:14px;
+  color:  #800000;
+}
+
+/* BOTTOM BARS ================================= */
+.modal1 .bar  { position:relative; display:block; width:100%; }
+.modal1 .bar:before,.modal1 .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background: #800000; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.modal1 .bar:before {
+  left:50%;
+}
+.modal1 .bar:after {
+  right:50%; 
+}
+
+/* active state */
+.modal1 input:focus ~ .bar:before,.modal1 input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.modal1 .highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.modal1 input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+
+
+
+
+.gender{
+  color: #800000;
+  margin-top: -15px;
+}
+.gender p{
+  font-size: 20px;
+}
+
+.gender div{
+  position: relative;
+  width: 30%;
+  display: inline-block;
+}
+
+.gender input{
+  width: 30%;
+  display: inline-flex;
+}
+
+
+
+.container-profile {
+  margin: auto;
+  display: block;
+  position: relative;
+  width: 100%;
+  transition: box-shadow 0.2s linear;
+  text-align: center;
+}
+.container-profile .top-image {
+  position: relative;
+  width: 100%;
+  align-self: flex-start;
+  height: auto;
+  z-index: 1;
+}
+
+.container-profile .profile-pic-container{
+  width: 200px;
+}
+
+.container-profile .profile-pic {
+  position: relative;
+  left:80px;
+  top:30px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  border-radius: 3px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.container-profile .profile {
+  position: relative;
+  display: inline-flex;
+  width: 100%;  
+  height: 200px;
+}
+ .profile-popularity {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+ .profile-popularity .field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-popularity .field .pop-tag {
+  color: grey;
+  font-size: 16px;
+}
+.profile-popularity .field .pop-num {
+  color: #80cbc4;
+  font-size: 20px;
+}
+.container-profile .profile .profile-info {
+  position: relative;
+  width: 70%; 
+  display: block;
+
+}
+.container-profile .profile .profile-info .name {
+  color: #26a69a;
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+}
+.container-profile .profile .profile-info .name-tag {
+  color: grey;
+  font-size: 16px;
+  display: block;
+}
+.container-profile .profile .profile-info .contact a {
+  float: right;
+  display: block;
+  text-decoration:none;
+  margin-top: 10px;
+}
+.container-profile .desc{
+  position: relative;
+  width: 50%;
+  display: block;
+}
+.container-profile .images-profile {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  left: 2%;
+  width: 90%;
+  background: white;
+  transition: all 0.1s ease-in-out;
+  z-index: 2;
+}
+.container-profile .images-profile .img {
+  width: 20%;
+  height: 150px;
+  margin: 1%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  
+}
+
+.posts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; 
+  margin-top: 80px;
+  left: 2%;
+  width: 96%;
+}
+.container-profile .posts .post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+.container-profile .posts .post .text {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+.container-profile .posts .post .post-title {
+  color: #004d40;
+  font-size: 22px;
+}
+.container-profile .posts .post .post-comment {
+  text-align: justify;
+  font-size: 15px;
+  color: #00695c;
+}
+
+
+
+
+footer{
+  position: relative;
+  width: 100%;  
+  background-color: #808080;
+  box-shadow: 0px 0px -1px; 
+  display: inline-flex;
+  color: #800000;
+  padding-bottom: 30px;
+}
+
+footer div{
+  width: 33%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+footer div div{
+  width: 80%;
+
+}
+
+footer div span{
+  display: block;
+}
+footer div a{
+  padding: 30px;
+  margin-left: 40px;
+  text-decoration:none;
+  color: #800000;
+}
+footer hr{
+  display: 
+  margin-top: 75px;
+  width: 0.5px;
+  height: 150px;
+}
+
+select{
+  width: 60%;
+  height: 20px;
+}
+
+
+
+@media (min-width: 20rem) {
+
+footer{
+  position: relative;
+  width: 100%;  
+    background-color:#808080;
+    box-shadow: 0px 0px -1px; 
+    display: block;
+
+}
+footer hr{
+  width: 60%;
+  height: 0.5px;
+}
+
+
+
+}
+
+@media (min-width: 56rem) {
+
+footer{
+  position: relative;
+  width: 100%;  
+    background-color:#808080;
+    box-shadow: 0px 0px -1px; 
+    display: inline-flex;
+
+}
+footer hr{
+  margin-top: 20px;
+  width: 0.5px;
+  height: 100px;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+#verification{
+  height: 60px;
+  background-color: #FA8072;
+  width: 100%;
+  display: inline-flex;
+  color: black;
+}
+#verification div{
+  width: 50%;
+  padding-left:5% ;
+  margin-top: 17px;
+}
+
+#verification  input[type=text]{
+
+}
+#verification input[type=sumbit]{
+  background-color: #e74c3c;
+  box-shadow: 0px 5px 0px 0px #CE3323;
+  float: right;
+}

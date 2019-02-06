@@ -1,5 +1,9 @@
 <?php
 	session_start();
 	session_destroy();
-	header("location:index.php");
+	if ($_SESSION['log_client'] =="vendor") {
+		header("location:vendors");
+	} else {
+		header("location:index.php");
+	}
 ?>

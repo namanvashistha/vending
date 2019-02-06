@@ -13,7 +13,7 @@ nav{
 	background-color: white;
 	box-shadow: 0px 0px 1px; 
 }
-nav span{0
+nav span{
 	float:right;
 	margin-top:20px;
 	margin-right:20px;
@@ -26,19 +26,40 @@ nav a:hover{
 	cursor: pointer;
 	color:#909090; 
 }
+
+#vendor-link{
+  position: absolute;
+  right: 0px;
+  margin-top:-12px;
+  float: right;
+  margin-right:20px;
+}
+
+#vendor-link a{
+  text-decoration:none;
+  color: #808080;
+}
+
+#vendor-link a:hover{
+  cursor: pointer;
+  color:#800000;
+}
+
+#logout{
+ margin-top: 32px; 
+}
+
+#logout a{
+  text-decoration: none;
+  color: #800000; 
+}
+
 nav #logo{
 	margin-top:10px;
 	margin-left: 20px;
 }
-footer{
-	height: 100px;
-	background-color:#F5F5F5;
-	box-shadow: 0px 0px -1px;
-	bottom: 0px;
-}
 
-
-.modal button {
+#modal-form .modal button {
     background-color: #800000;
     color: white;
     padding: 14px 20px;
@@ -50,44 +71,45 @@ footer{
     font-weight:bold;
 }
 
-.modal button:hover {
+#modal-form .modal button:hover {
     opacity: 0.8;
 }
 
-.cancelbtn {
+#modal-form .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #404040;
     color:  ;
 }
 
-.imgcontainer {
+#modal-form .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
 
 
- .modal img{
+ #modal-form .modal img{
   position: relative;
   width: 55%;
 }
 
-.container {
+#modal-form .container {
     padding-top: 50px;    
     padding-right: 50px;
     width: 30%;
-    float: right;
 }
 
-span .log_pass {
+#modal-form span .log_pass {
     text-decoration: none;
     float: right;
     padding-top: 16px;
 }
 
-
-.modal {
+#modal-form #id01 .container{
+  float: right;
+}
+#modal-form .modal {
     display: block; 
     position:relative; 
     z-index: 1; 
@@ -104,17 +126,18 @@ span .log_pass {
 }
 
 
-.modal-content {
+#modal-form .modal-content {
 	margin-top: 5px;
     background-color: white;
     width: 100%;
+    height: 100%;
 }
 
-.buttons{
+#modal-form .buttons{
   color: #FFDF00;
 }
 
-.close {
+#modal-form .close {
     position: absolute;
     right: 15px;
     top: 0px;
@@ -123,17 +146,17 @@ span .log_pass {
     font-weight: bold;
 }
 
-.close:hover,.close:focus {
+#modal-form .close:hover,#modal-form .close:focus {
     color: red;
     cursor: pointer;
 }
 
-.group 			  { 
+#modal-form .group 			  { 
   position:relative; 
   margin-bottom:35px; 
 }
 
-.modal input 				{
+.modal input[type=text], .modal input[type=password]  				{
   font-size:18px;
   padding:10px 5px 5px 5px;
   display:block;
@@ -141,7 +164,7 @@ span .log_pass {
   border:none;
   border-bottom:1px solid #757575;
 }
-.modal input:focus 		{ outline:none; }
+ .modal input:focus 		{ outline:none; }
 
 /* LABEL ======================================= */
 .modal label 				 {
@@ -158,7 +181,7 @@ span .log_pass {
 }
 
 /* active state */
-.modal input:focus ~ label,.modal  input:valid ~ label 		{
+.modal input:focus ~ label, .modal  input:valid ~ label 		{
   top:-15px;
   font-size:14px;
   color:  #800000;
@@ -222,189 +245,292 @@ span .log_pass {
 }
 
 #id02 .modal-content{
-	
-
+	align-self: center;
+}
+#id02 .container,#id03 .container{
+  width: 50%;
+  align-self: center;
 }
 
-#img-grid { 
-  padding: .5vw;
-  font-size: 0;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: row wrap; 
-  flex-flow: row wrap; 
-  display: -webkit-box;
-  display: flex;
+#category{
+  display: inline-flex;
+  width: 100%;  
 }
-#img-grid div { 
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  flex: auto; 
-  width: 200px;
-  max-width: 33%; 
-  margin: .5vw; 
+#category b{
+  color: #800000;
 }
-#img-grid div img { 
-  width: 100%; 
-  height: auto;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  border-radius: 0.10rem; 
+.cat-list{
+  width: 25%;
+  display: block;
 }
-@media screen and (max-width: 50%) {
-  #img-grid div { margin: 0; }
-  #img-grid { padding: 0; }
+.cat-list div{
+  display: block;
+  padding: 15px;
+}
+
+.cat-list span{
+  display: inline;
+}
+#category input{
+  float: left;  
+}
+
+
+.modal-vendor button {
+    background-color: #800000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    font-weight:bold;
+}
+
+.modal-vendor button:hover {
+    opacity: 0.8;
+}
+
+.modal-vendor .cancelbtn {
+    width: auto;
+    padding: 10px 10px;
+    background-color: #404040;
+}
+
+.modal-vendor .imgcontainer {
+    text-align: center;
+    margin: 12px 0 12px 0;
+    position: relative;
+}
+
+
+ .modal-vendor img{
+  position: relative;
+  width: 55%;
+  height: 500px;
+  margin-bottom: 0px;
+}
+
+.modal-vendor .container {
+    width: 100%;
+    height: 550px;
+    margin-top: -15px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.modal-vendor span .log_pass {
+    text-decoration: none;
+    float: right;
+    padding-top: 16px;
+}
+
+
+.modal-vendor {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    z-index: 3;
+}
+
+
+.modal-vendor-content {
+    background-color:white;
+    width: 90%;
+    margin: 25px 5%;
+    height: 500px;
+    position: absolute;
+    border-radius: 5px;
+    top: 0px;
+}
+
+.modal-vendor .buttons{
+  color: #FFDF00;
+}
+
+.modal-vendor .close {
+    position: absolute;
+    right: -5%;
+    top: -40px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.modal-vendor .close:hover,.modal-vendor .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.modal-vendor .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    .modal-vendor span.log_pass{
+        text-decoration: none;
+       display: block;
+       float: none;
+    }
+    .modal-vendor .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+
+.images-profile {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  left: 2%;
+  width: 90%;
+  background: white;
+  transition: all 0.1s ease-in-out;
+  z-index: 2;
+}
+.images-profile .img {
+  width: 20%;
+  height: 150px;
+  margin: 1%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
   
 }
 
 
 
-.containerform button,
-.containerform input,
-.containerform textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-  margin-top: 0.5em;
+
+footer{
+  position: relative;
+  width: 100%;  
+  background-color: #808080;
+  box-shadow: 0px 0px -1px; 
+  display: inline-flex;
+  color: #800000;
+  padding-bottom: 30px;
 }
 
-.containerform label {
-  margin: 0.75em 0;
-  font-weight: bold;
+footer div{
+  width: 33%;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
-.containerform input[type="radio"] + .containerform label,
-.containerform input[type="checkbox"] + .containerform label { 
-  margin: 0;
-  font-weight: 400; 
+footer div div{
+  width: 80%;
+
 }
 
-.containerform button,
-.containerform input[type=button],
-.containerform input[type=reset],
-.containerform input[type=submit],
-{
-  -webkit-appearance: button;
-  cursor: pointer;
+footer div span{
+  display: block;
+}
+footer div a{
+  padding: 30px;
+  margin-left: 40px;
+  text-decoration:none;
+  color: #800000;
+}
+footer hr{
+  display: 
+  margin-top: 75px;
+  width: 0.5px;
+  height: 150px;
 }
 
-.containerform button[disabled],
-.containerform input[disabled] {
-  cursor: default;
-}
-
-.containerform input {
-  line-height: normal;
-}
-
-.containerform textarea { line-height: 1.25em; }
-
-.containerform select {
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-.containerform input[type=checkbox],
-.containerform input[type=radio] {
-  box-sizing: border-box;
-  padding: 0;
-  margin-right: 0.25em;
-  margin-top: 2px;
-  float: left;
-  clear: both;
-}
-
-.containerform input[type=search] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-.containerform input[type=search]::-webkit-search-cancel-button,
-.containerform input[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.containerform input[type=text],
-.containerform input[type=password],
-.containerform input[type=email],
-.containerform input[type=url],
-.containerform input[type=tel],
-.containerform keygen::-webkit-keygen-select,
-.containerform select,
-.containerform textarea {
-  border: 1px solid #ccc;
-  box-shadow: inset 0 1px 3px #ddd;
-  border-radius: 2px;
-  vertical-align: middle;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 100%;
-  padding: 0.5em 0.6em;
-  margin-bottom: 0.5em;
-}
-
-.containerform input:not([type]) {
-  border: 1px solid #ccc;
-  box-shadow: inset 0 1px 3px #ddd;
-  border-radius: 2px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0.5em 0.6em;
-}
-
-.containerform input[type=color] {
-  padding: 0.2em 0.5em;
-}
-
-.containerform input[type=file]:focus,
-.containerform input[type=radio]:focus,
-.containerform input[type=checkbox]:focus {
-  outline: 1px auto #129FEA;
-}
-
-.containerform input[readonly],
-.containerform select[readonly],
-.containerform textarea[readonly] {
-  background-color: #800000;
-  color: #777;
-  border-color: #ccc;
-}
-
-.containerform input:focus:invalid,
-.containerform textarea:focus:invalid,
-.containerform select:focus:invalid {
-  color: #b94a48;
-  border-color: #e9322d;
-  }
-
-.containerform input[type=file]:focus:invalid:focus,
-.containerform input[type=radio]:focus:invalid:focus,
-.containerform input[type=checkbox]:focus:invalid:focus {
-  outline-color: #e9322d;
+select{
+  width: 60%;
+  height: 20px;
 }
 
 
-/* Style your form buttons. Follow your heart */
 
-.containerform input[type="submit"],
-.containerform input[type="reset"],
-.containerform input[type="button"],
-.containerform button {
-  padding: 8px 12px;
-  color: white;
-  background-color: #800000;
-  border: 0;
-  cursor: pointer;
-  transition: all 300ms ease;
+@media (min-width: 20rem) {
+
+footer{
+  position: relative;
+  width: 100%;  
+    background-color:#808080;
+    box-shadow: 0px 0px -1px; 
+    display: block;
+
+}
+footer hr{
+  width: 60%;
+  height: 0.5px;
 }
 
-.containerform input[type="submit"]:hover,
-.containerform input[type="reset"]:hover,
-.containerform input[type="button"]:hover,
-.containerform button:hover {
-  background-color:   #B22222;
+
+
+}
+
+@media (min-width: 56rem) {
+
+footer{
+  position: relative;
+  width: 100%;  
+    background-color:#808080;
+    box-shadow: 0px 0px -1px; 
+    display: inline-flex;
+
+}
+footer hr{
+  margin-top: 20px;
+  width: 0.5px;
+  height: 100px;
+}
+}
+
+
+#verification{
+  height: 60px;
+  background-color: #FA8072;
+  width: 100%;
+  display: inline-flex;
+  color: black;
+}
+#verification div{
+  width: 50%;
+  padding-left:5% ;
+  margin-top: 17px;
+}
+
+#verification  input[type=text]{
+
+}
+#verification input[type=sumbit]{
+  background-color: #e74c3c;
+  box-shadow: 0px 5px 0px 0px #CE3323;
+  float: right;
+}
+
+
+
+#displaypicture{
+  height: 200px;
+  width: 200px;
 }

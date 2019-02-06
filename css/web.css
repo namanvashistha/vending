@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+
+body{
+    margin:0px;
+    
+  font-family: 'Great Vibes', cursive; 
+  height: 100%;
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+    background-color: #800000;
+    box-shadow: 0px 0px 1px; 
+    height: 100px;
+    z-index: 10;
+}
+nav div{ margin-top: 10px;
+  margin-top: 20px;
+}
+nav span{
+  display: inline;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+nav span:hover{
+  height: 20px;
+    cursor: pointer;
+    background-color: #A52A2A;
+    border-radius: 2px;
+}
+
+
+nav a{
+  text-decoration:none;
+  text-shadow: 0.5px 0.5px 0.5px;
+  color:white;
+  height: 40px;
+  border: 1px;
+  border-color: white;
+  display: inline-flex;
+}
+
+nav a : hover{
+    color:#800000;
+}
+
+
+#nav-bg{
+  background-image: url('https://i.pinimg.com/originals/bb/27/e5/bb27e5960a7704bc269f5361b26119d2.jpg');
+   height: 400px; 
+   display: relative; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+
+.fa{
+  cursor: pointer;
+}
+
+#main hr{
+  width: 70%;
+}
+#main{
+  position: relative;
+  
+}
+
+#main #chaneel div {
+ padding:20px 10%;  
+}
+
+
+
+footer{
+  position: relative;
+  top:200px;
+  width: 100%;  
+  background-color: #808080;
+  box-shadow: 0px 0px -1px; 
+  display: inline-flex;
+  color: #800000;
+  padding-bottom: 30px;
+}
+
+footer div{
+  width: 33%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+footer div div{
+  width: 80%;
+
+}
+
+footer div span{
+  display: block;
+}
+footer div a{
+  padding: 30px;
+  margin-left: 40px;
+  text-decoration:none;
+  color: #800000;
+}
+footer hr{
+  display: 
+  margin-top: 75px;
+  width: 0.5px;
+  height: 150px;
+}
+
+select{
+  width: 60%;
+  height: 20px;
+}
+
+#slideshows{
+  position: relative;
+  display: inline-block;
+}
+
+.slides{
+  width: 40%;
+  display: inline-block;
+  margin-left: 7%;
+  margin-top: 70px;
+}
+
+.slides img{
+  width: 100%;
+  position: inherit; 
+}
+
+
+@media (min-width: 20rem) {
+
+#img-frame{
+  width: 90%;
+  height: 500px;
+}
+
+footer{
+  position: relative;
+  top:200px;
+  width: 100%;  
+    background-color:#808080;
+    box-shadow: 0px 0px -1px; 
+    display: block;
+
+}
+footer hr{
+  width: 60%;
+  height: 0.5px;
+}
+
+#slideshows{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.slides{
+  width: 90%;
+  display: inline-block;
+  margin-left: 7.5%;
+}
+
+.slides img{
+  width: 100%;
+  position: inherit; 
+}
+
+
+
+}
+
+@media (min-width: 56rem) {
+#img-frame{
+  width: 60%;
+  height: 500px;
+}
+footer{
+  position: relative;
+  top:200px;
+  width: 100%;  
+    background-color:#808080;
+    box-shadow: 0px 0px -1px; 
+    display: inline-flex;
+
+}
+footer hr{
+  margin-top: 20px;
+  width: 0.5px;
+  height: 100px;
+}
+
+#slideshows{
+  position: relative;
+  display: inline-block;
+
+}
+
+.slides{
+  width: 40%;
+  display: inline-block;
+  margin-left: 6.5%;
+}
+
+.slides img{
+  width: 100%;
+  position: inherit; 
+}
+
+
+
+}
+
+
+
+.button-two {
+  color: white;
+  border-radius: 4px;
+  background-color:#800000;
+  border: none;
+  padding: 4px;
+  transition: all 0.5s;
+  text-align: center;
+  cursor: pointer;
+  font-size:14px;
+  margin: 0 0 0 0px;
+  margin-top: 4px;
+  margin-left: -20px;
+  margin-top: -100px;
+}
+
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+input[type=email]{
+  width:200px;
+  padding:5px 6px;
+}
+
+#rights{
+  text-align: center;
+}
+
+
+
+
+#home-search{
+  color: white;
+  position: absolute;
+  z-index: 2;
+  width:100%;
+  display: inline;
+  color: white; 
+  font-family: 'Great Vibes', cursive; 
+  font-size: 120px; 
+  line-height: 120px; 
+  font-weight: normal; 
+  margin-bottom: 0px; 
+  margin-top: 15px; 
+  text-align: center; 
+  text-shadow: 0 1px 1px #fff;
+}
+
+
+
+#setform{
+  height: 100px;
+}
+
+#welcome{
+  z-index: 2;
+  color: #800000; 
+  font-family: 'Great Vibes', cursive; 
+  font-size: 80px; 
+  line-height: 120px; 
+  font-weight: normal; 
+  text-align: center; 
+  text-shadow: 0 1px 1px #fff;
+}
+
+
+

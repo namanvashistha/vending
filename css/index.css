@@ -4,7 +4,6 @@ body{
 	margin:0px;
 	font-family: Roboto;
 	color: #808080;
-  height: 100%;
   position: relative;
 }
 
@@ -53,17 +52,9 @@ nav #logo{
 	margin-top:10px;
 	margin-left: 20px;
 }
-footer{
-  display: none;
-	height: 200px;
-  width: 100%;  
-	background-color:#F5F5F5;
-	box-shadow: 0px 0px -1px;
-  position: inherit; 
-}
+
 
 #front{
-  background-color: green;
 }
 
 #search-space{
@@ -75,6 +66,7 @@ footer{
 
 #vendors{
   display: inline-flex;
+  width: 100%;
 }
 
 
@@ -312,10 +304,9 @@ span .log_pass {
 
 #search{
   top: 250px;
-  margin-left:22%;
   position: absolute;
   z-index: 2;
-  width:65%;
+  width:100%;
   display: inline;
 }
 .search-container{
@@ -369,21 +360,15 @@ input.search-bar{
 
 
 
-
-
-
-#sampletext {
-  position: relative; 
-  font : italic bold 60px arial;
-  color : #aaaaaa;
-  margin-top : 200px;
-}
 #slideshow{
   width: 100%;
 }
-#slideshow img{
-  width: 100%;
+
+.slide{
   position: absolute;
+  filter: brightness(50%);
+  height: 550px;
+  width: 100%;
   background: rgba(0,0,0,.4);
 }
 
@@ -393,6 +378,10 @@ input.search-bar{
     left: 0px; 
     right: 0px; 
     bottom: 0px; 
+}
+
+#slide-position{
+  height: 550px;
 }
 
 
@@ -433,7 +422,6 @@ input.search-bar{
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   border-radius: 0.25rem;
    width: 100%;
-   cursor: pointer;
 }
 
 .cards__item {
@@ -468,7 +456,7 @@ input.search-bar{
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: gray;  
+  color: gray;
 }
 .card:hover .card__image {
   -webkit-filter: contrast(100%);
@@ -593,4 +581,281 @@ input.home-search-bar{
 .gender input{
   width: 30%;
   display: inline-flex;
+}
+
+
+
+
+.plus {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 5%;
+  bottom: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #00796b;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+  cursor: pointer;
+}
+.plus .symbol {
+  width: 25px;
+  height: 25px;
+  background: url('../images/s1.jpg');
+ 
+}
+
+.plus:active {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+footer{
+  position: relative;
+  width: 100%;  
+  background-color: #808080;
+  box-shadow: 0px 0px -1px; 
+  display: inline-flex;
+  color: #800000;
+  padding-bottom: 30px;
+}
+
+footer div{
+  width: 33%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+footer div div{
+  width: 80%;
+
+}
+
+footer div span{
+  display: block;
+}
+footer div a{
+  padding: 30px;
+  margin-left: 40px;
+  text-decoration:none;
+  color: #800000;
+}
+footer hr{
+  display: 
+  margin-top: 75px;
+  width: 0.5px;
+  height: 150px;
+}
+
+select{
+  width: 60%;
+  height: 20px;
+}
+
+
+
+@media (min-width: 20rem) {
+
+footer{
+  position: relative;
+  width: 100%;  
+    background-color:#808080;
+    box-shadow: 0px 0px -1px; 
+    display: block;
+
+}
+footer hr{
+  width: 60%;
+  height: 0.5px;
+}
+
+
+
+}
+
+@media (min-width: 56rem) {
+
+footer{
+  position: relative;
+  width: 100%;  
+    background-color:#808080;
+    box-shadow: 0px 0px -1px; 
+    display: inline-flex;
+
+}
+footer hr{
+  margin-top: 20px;
+  width: 0.5px;
+  height: 100px;
+}
+
+
+
+
+}
+
+
+#verification{
+  height: 60px;
+  background-color: #FA8072;
+  width: 100%;
+  display: inline-flex;
+  color: black;
+}
+#verification div{
+  width: 50%;
+  padding-left:5% ;
+  margin-top: 17px;
+}
+
+#verification  input[type=text]{
+
+}
+#verification input[type=sumbit]{
+  background-color: #e74c3c;
+  box-shadow: 0px 5px 0px 0px #CE3323;
+  float: right;
+}
+
+
+.weddingweb{
+  background-image: url('https://www.thespruce.com/thmb/veNWAwTxrA_D8H2h39duh-GiWuo=/1336x923/filters:no_upscale()/ewedding-free-wedding-websites-5bc8bf1246e0fb0026388c85.jpg');
+  height: 250px;
+  font-family: 'Great Vibes', cursive; 
+  font-weight: bold;
+  border-radius: 3px;
+  margin:10px;
+  background-size: cover; 
+  background-position: center center;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/*Button Three*/
+.weddingweb a {
+    top:170px;
+    width: 70%;
+    position: relative;
+    background-color: #f39c12;
+    border: none;
+    padding: 15px;
+    border-radius: 3px; 
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.weddingweb a:hover{
+   background:#fff;
+   box-shadow:0px 2px 10px 5px #97B1BF;
+   color:#000;
+}
+
+.weddingweb a:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    margin-left: -20px !important;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.weddingweb a:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+
+.advertise{
+  background-color: #DCDCDC;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  height: 200px;
+  border-radius: 3px;
+  align-self: center;
+  padding:5%;
+  margin:15px;
+}
+
+#prev-next{
+  width: 55%;
+  display: inline-flex;
+  float: right;
+}
+
+#prev-next .button {
+  border-radius: 4px;
+  background-color:#800000;
+  color: white;
+  border: none;
+  margin:20px;
+  padding:10px 20px;
+  transition: all 0.5s;
+}
+
+
+#prev-next .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#prev-next .button span:after {#welcome{
+  z-index: 2;
+  color: #800000; 
+  font-family: 'Great Vibes', cursive; 
+  font-size: 80px; 
+  line-height: 120px; 
+  font-weight: normal; 
+  text-align: center; 
+  text-shadow: 0 1px 1px #fff;
+}
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#prev-next .prev span:after {
+  content: '«';
+}
+#prev-next .button:hover span {
+  padding-right: 25px;
+}
+
+#prev-next .button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+#loading{
+  width: 20%;
+  margin-top: 100px;
+}
+
+#main-welcome{
+  z-index: 2;
+  color:white; 
+  font-family: 'Great Vibes', cursive; 
+  font-size: 70px; 
+  line-height: 120px; 
+  font-weight: normal; 
+  text-align: center; 
+  text-shadow: 0 1px 1px #800000;
 }

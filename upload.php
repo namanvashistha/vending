@@ -1,11 +1,22 @@
 <?php
 session_start();
+date_default_timezone_set('Asia/Kolkata');
+$current_date = date('YmdHis');
+
 $_SESSION['upload_error']='';
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-$target_file = $target_dir .basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir .$current_date."-".$_SESSION['log_vendorid'].".".$imageFileType;
+if (isset($_POST['displaypicture'])) {
+    $target_file = "displaypicture_".$current_date."-".$_SESSION['log_vendorid'].".".$imageFileType;
+    include 'connection.php';
+    $log_vendorid=$_SESSION['log_vendorid'];
+    $q="UPDATE `vendor` SET `displaypicture`='$target_file' WHERE vendorid='$log_vendorid';";
+    $q1=mysqli_query($con,$q);
+    $target_file =$target_dir.$target_file;
+}
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -45,5 +56,5 @@ if ($uploadOk == 0) {
     }
     
 }
-header("location:vendor.php");
+header("location:vendors");
 ?>
