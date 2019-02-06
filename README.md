@@ -1,8 +1,8 @@
-# foodly
+# vending
 
 #### Discover everything you need to plan your big day
 
-## [foodly.ml](http://foodly.ml/)
+## [vending.ml](http://namantesting.ml/)
 
 ### Prerequisites
 - install [xampp](https://www.apachefriends.org/download.html)
@@ -11,7 +11,7 @@
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/namanvashistha/foodly/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/namanvashistha/vending/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -19,5 +19,5 @@ Please read [CONTRIBUTING.md](https://github.com/namanvashistha/foodly/blob/mast
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/namanvashistha/foodly/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/namanvashistha/vending/blob/master/LICENSE) file for details
  
